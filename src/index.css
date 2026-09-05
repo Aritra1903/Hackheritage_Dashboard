@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.025em;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.04em;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Tactical HUD scanline effect overlay (subtle) */
+.tactical-scanline {
+  background: linear-gradient(
+    rgba(18, 25, 22, 0) 50%, 
+    rgba(0, 255, 102, 0.015) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(0, 255, 102, 0.01),
+    rgba(0, 0, 0, 0),
+    rgba(0, 255, 102, 0.01)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Tactical glowing card borders */
+.tactical-panel {
+  background: #040907;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 15px rgba(0, 255, 102, 0.03), inset 0 0 20px rgba(0, 255, 102, 0.01);
+}
+
+.tactical-panel-active {
+  border-color: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.15), inset 0 0 15px rgba(34, 197, 94, 0.05);
+}
+
+/* Radar grid canvas styling */
+.radar-grid-bg {
+  background-image: 
+    linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom tactical scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #030705;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.35);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.6);
+}
+
